@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Assignment</title>
+    <link rel="stylesheet" href="styles.css"
+</head>
+<body>
+    <!-- fist section -->
+    <div class="img-background1">
+        <header class="header">
+            <div class="logo"><img src="/images/logo.jpg" alt="logo"></div>
+            <div>
+                <ul class="nav-bar">
+                  <li><a href="#history-part">1. History</a></li>
+                  <li><a href="#climb-part">2. Team</a></li>
+                </ul>
+            </div>
+        </header>
+    </div>
+
+    <!-- second section -->
+    <div class="history-part" id="history-part">
+      
+    </div>
+
+    <!-- climb-part -->
+    <div class="climb-part" id="climb-part"></div>
+    <!-- mountain part -->
+    <div class="mountain-options">
+        <ul class="mountain-items">
+            <li id="list-mountain1"><a onclick="mountain1()">Mountain 1</a></li>
+            <li id="list-mountain2"><a onclick="mountain2()">Mountain 2</a></li>
+        </ul>
+    </div>
+    <div class="mountain1"  id="mountain1">
+        <img src="/images/mountain1.jpg" alt="mountain1" id="imgMountain1" class="imgMountain1">
+       
+    </div>
+
+    <div class="mountain2" id="mountain2">
+        <img src="/images/logo.jpg" alt="mountain1" id="imgMountain1" class="imgMountain1">
+    </div>
+    <!-- footer section -->
+    <div class="footer">
+        <div class="footer-left"><img src="/images/logo.jpg" alt="logo" class="logo"><P class="losangeles">LOSANGELES<br> MOUNTAINS</P></div>
+        <div class="footer-right">CopyRight &COPY; 2024 All Rights Reserved</div>
+    </div>
+    
+    <script>
+        function mountain1(){
+             let mountainDiv1= document.getElementById('mountain1');
+              document.getElementById('mountain2').style.display = 'none';
+             let listMountain1 = document.getElementById('list-mountain1');
+              document.getElementById('list-mountain2').style.backgroundColor = 'transparent';
+              document.getElementById('list-mountain2').style.textDecoration = 'none';
+                listMountain1.style.backgroundColor= 'grey';
+                listMountain1.style.textDecoration = 'underline';
+             mountainDiv1.style.display='block';
+             console.log('clicked');
+        }
+
+        function mountain2(){
+            let mountainDiv2 = document.getElementById('mountain2')
+             document.getElementById('mountain1').style.display ='none';
+            let listMountain2 = document.getElementById('list-mountain2');
+              document.getElementById('list-mountain1').style.backgroundColor = 'transparent';
+              document.getElementById('list-mountain1').style.textDecoration = 'none'
+            listMountain2.style.backgroundColor = 'grey';
+            listMountain2.style.textDecoration = 'underline';
+            mountainDiv2.style.display ='block';
+        }
+       
+    </script>
+</body>
+</html>
